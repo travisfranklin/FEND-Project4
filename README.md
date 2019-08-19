@@ -1,26 +1,51 @@
 # Project Overview
 
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
+This project tested my ability to use [Jasmine](http://jasmine.github.io/) testing suite to validate a simple RSS feed app.
+
+Although I would advise viewers to [run this locally](#using-locally) for testing, [here is a link to the GitHub pages site for this repo](https://travisfranklin.github.io/FEND-Project4/).
+
+## Using Locally
+
+To begin, open `index.html` in a browser.
+
+You'll see your feedreader app once it loads in. The Jasmine testing suite will be visible at the bottom of the page.
+
+Tests should be green, but if they are red, you'll know there is a problem.
 
 
-## Why this Project?
+### Creating a Test
 
-Testing is an important part of the development process and many organizations practice a standard of development known as "test-driven development." This is when developers write tests first, before they ever start developing their application. All the tests initially fail and then they start writing application code to make these tests pass.
+It's entirely possible for you to create your own tests right in your browser. Here's an example:
 
-Whether you work in an organization that uses test-driven development or in an organization that uses tests to make sure future feature development doesn't break existing features, it's an important skill to have!
+```javascript
+describe('Major Part Name', function () {
+    it('should do a thing', function () {
+        expect(something).toBe(true);
+    });
+    it('should do another thing', function () {
+        expect(somethingElse).toBeDefined();
+    });
+});
+```
+#### Here's the major parts of a test:
+##### describe
+Creates a group of specs (often called a suite).
+Calls to describe can be nested within other calls to compose your suite as a tree.
 
+## Dependencies
 
-## What will I learn?
+The code for this site was primarily from [Udacity](https://github.com/udacity/frontend-nanodegree-feedreader), and a few common external resources were used.
 
-You will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
-
+- [Google Fonts](http://handlebarsjs.com)
+- [Handlebars](http://handlebarsjs.com)
+- [Jasmine](https://jasmine.github.io)
+- [jQuery](http://jquery.com)
 
 ## How will this help my career?
 
 Writing effective tests requires analyzing multiple aspects of an application including the HTML, CSS and JavaScript - an extremely important skill when changing teams or joining a new company.
 
 Good tests give you the ability to quickly analyze whether new code breaks an existing feature within your codebase, without having to manually test all of the functionality.
-
 
 # Development Strategy
 
