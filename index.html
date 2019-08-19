@@ -16,6 +16,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/jasmine-html.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.3.0/boot.min.js"></script>
+
     </head>
     <body class="menu-hidden">
         <div class="header">
@@ -55,5 +56,14 @@
         <script src="js/app.js"></script>
 
         <script src="jasmine/spec/feedreader.js"></script>
+        <script>
+          $(document).ready(function() {
+            setTimeout(function(){
+            $("html, body").animate({
+                scrollTop: $(
+                  'html, body').get(0).scrollHeight
+            }, 1000)}, 800);
+          });
+        </script>
     </body>
 </html>
