@@ -89,14 +89,13 @@ function loadFeed(id, cb) {
 /* Google API: Loads the Feed Reader API and defines what function
  * to call when the Feed Reader API is done loading.
  */
-function loadScript(src,callback){
-
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    if(callback)script.onload=callback;
-    document.getElementsByTagName("body")[0].appendChild(script);
-    script.src = src;
-  }
+function loadScript(src, callback) {
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  if (callback)script.onload=callback;
+  document.getElementsByTagName('body')[0].appendChild(script);
+  script.src = src;
+}
 
 loadScript('https://google.com/jsapi');
 
@@ -109,7 +108,7 @@ loadScript('https://google.com/jsapi');
 $(
     (function() {
       const container = $('.feed');
-      let feedList = $('.feed-list');
+      const feedList = $('.feed-list');
       const feedItemTemplate = Handlebars.compile(
           $('.tpl-feed-list-item').html()
       );

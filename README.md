@@ -4,6 +4,19 @@ This project tested my ability to use [Jasmine](http://jasmine.github.io/) testi
 
 Although I would advise viewers to [run this locally](#using-locally) for testing, [here is a link to the GitHub pages site for this repo](https://travisfranklin.github.io/FEND-Project4/).
 
+I have included a script in the html that scrolls the viewer to the bottom of the page for easy viewing of the testing area. If you would prefer the page to not behave this way, simply remove this script from the html file:
+```html
+<script>
+  $(document).ready(function() {
+    setTimeout(function(){
+    $("html, body").animate({
+        scrollTop: $(
+          'html, body').get(0).scrollHeight
+    }, 1000)}, 900);
+  });
+</script>
+```
+
 ## Using Locally
 
 To begin, open `index.html` in a browser.
@@ -12,7 +25,7 @@ You'll see your feedreader app once it loads in. The Jasmine testing suite will 
 
 Tests should be green, but if they are red, you'll know there is a problem.
 
-### // TEST CREATION
+### Test Creation
 
 It's entirely possible for you to create your own tests right in your browser. Here's an example:
 
@@ -23,7 +36,7 @@ It's entirely possible for you to create your own tests right in your browser. H
      });
    });
 ```
-#### // THE MAJOR PARTS OF A TEST
+#### How A Test Is Built
 
 ##### describe
 Creates a group of specs (often called a suite).
