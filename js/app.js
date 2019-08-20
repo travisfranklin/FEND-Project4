@@ -89,7 +89,18 @@ function loadFeed(id, cb) {
 /* Google API: Loads the Feed Reader API and defines what function
  * to call when the Feed Reader API is done loading.
  */
-google.setOnLoadCallback(init);
+function loadScript(src,callback){
+
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    if(callback)script.onload=callback;
+    document.getElementsByTagName("head")[0].appendChild(script);
+    script.src = 'src';
+  }
+
+loadScript('http://google.com/jsapi');
+
+// google.setOnLoadCallback(init);
 
 /* All of this functionality is heavily reliant upon the DOM, so we
  * place our code in the $() function to ensure it doesn't execute
