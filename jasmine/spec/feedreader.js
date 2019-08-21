@@ -38,21 +38,21 @@ $(function() {
 
   // Validates that the menu button is working properly.
   describe('The menu', function() {
-    // Variables to reduce repitition.
-    const body = document.body;
+    // Variables to reduce repetition.
+    const body = $('body');
     const icon = $('.menu-icon-link');
 
     // Returns true if menu is hidden when the page loads.
     it('should be hidden by default', function() {
-      expect(body.className).toContain('menu-hidden');
+      expect(body.hasClass('menu-hidden')).toBe(true);
     });
 
     // Returns true if menu functions properly when clicked.
     it('should toggle visibility when clicked', function() {
       icon.click();
-      expect(body.className).not.toContain('menu-hidden');
+      expect(body.hasClass('menu-hidden')).not.toBe(true);
       icon.click();
-      expect(body.className).toContain('menu-hidden');
+      expect(body.hasClass('menu-hidden')).toBe(true);
     });
   });
   // Validates that each feed has content.
